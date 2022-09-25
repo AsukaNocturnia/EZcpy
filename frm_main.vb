@@ -305,9 +305,9 @@
 
         cmb_preset.SelectedIndex = 0
 
-        'If Not System.IO.File.Exists(Application.StartupPath & "\scrcpy.exe") Then
-        'MsgBox("Please run this program on the same folder where scrcpy is being placed.", vbCritical, "Critical Error!")
-        'Me.close
-        'End If
+        If Not System.IO.File.Exists(Application.StartupPath & "\scrcpy.exe") Then
+            MsgBox("Please run this program on the same folder where scrcpy is being placed.", vbCritical, "Critical Error!")
+            Me.Close()
+        End If
     End Sub
 End Class
